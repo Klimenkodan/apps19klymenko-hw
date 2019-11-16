@@ -6,7 +6,7 @@ import ua.edu.ucu.functions.MyFunction;
 import java.util.Arrays;
 
 // Map every element to another object using MyFunction
-public class MapDecorator extends SmartArrayDecorator{
+public class MapDecorator extends SmartArrayDecorator {
 
     public MapDecorator(SmartArray smartArray, MyFunction func) {
         super(smartArray);

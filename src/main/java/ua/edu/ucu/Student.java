@@ -37,11 +37,11 @@ class Student {
     }
 
     @Override
-    public boolean equals(Object obj2) {
-        if (!(obj2 instanceof Student)) {
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Student)) {
            return false;
         }
-        return hashCode() == obj2.hashCode();
+        return hashCode() == obj.hashCode();
     }
 
     @Override

@@ -2,7 +2,7 @@ package ua.edu.ucu.smartarr;
 
 
 // Base array for decorators
-public class BaseArray implements SmartArray{
+public class BaseArray implements SmartArray {
     private Object[] arr;
     private int size;
 
