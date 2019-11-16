@@ -38,6 +38,9 @@ class Student {
 
     @Override
     public boolean equals(Object obj2) {
+        if (!(obj2 instanceof Student)) {
+           return false;
+        }
         return hashCode() == obj2.hashCode();
     }
 

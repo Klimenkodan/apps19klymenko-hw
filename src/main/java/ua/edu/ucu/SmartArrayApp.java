@@ -8,6 +8,8 @@ import ua.edu.ucu.smartarr.*;
 
 
 public class SmartArrayApp {
+    static final double MINGPA = 4;
+    static final int YEARREQUIRED = 2;
 
     public static Integer[]
             filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
@@ -49,16 +51,17 @@ public class SmartArrayApp {
         MyPredicate pred = new MyPredicate() {
             @Override
             public boolean test(Object st) {
-                return ((Student)st).getYear() == 2 && ((Student)st).getGPA() >= 4;
+                Student stud = (Student) st;
+                return stud.getYear() == YEARREQUIRED && stud.getGPA() >= MINGPA;
             }
         };
 
         MyComparator comp = new MyComparator() {
             @Override
             public int compare(Object st1, Object st2) {
-                String sur1 = ((Student)st1).getSurname();
-                String sur2 = ((Student)st2).getSurname();
-                return sur1.compareTo(sur2);
+                String surFirst = ((Student)st1).getSurname();
+                String surSecond = ((Student)st2).getSurname();
+                return surFirst.compareTo(surSecond);
             }
 
             };
@@ -66,7 +69,8 @@ public class SmartArrayApp {
         MyFunction func = new MyFunction() {
             @Override
             public Object apply(Object st) {
-                return ((Student)st).getSurname() + " " +  ((Student)st).getName();
+                Student student = (Student) st;
+                return student.getSurname() + " " +  student.getName();
             }
         };
 
