@@ -36,4 +36,14 @@ class Student {
         return "Student{name=" + name + ", surname=" + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
     }
 
+    @Override
+    public boolean equals(Object obj2) {
+        return hashCode() == obj2.hashCode();
+    }
+
+    @Override
+    public int hashCode() {
+        return getName().hashCode() + getName().hashCode() + (int) getGPA() + getYear();
+    }
+
 }

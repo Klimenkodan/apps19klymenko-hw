@@ -20,6 +20,7 @@ public class SmartArrayAppTest {
         assertArrayEquals(expectedRes, res);        
     }
 
+
     @Test
     public void testFindDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname() {
         Student[] students = {
@@ -34,7 +35,6 @@ public class SmartArrayAppTest {
         String[] studentNames = 
                 SmartArrayApp.findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(students);
         String[] expectedStudentNames = {"Borek Tomasz", "Kranga Antons", "Sutter Burr"};
-
         assertArrayEquals(expectedStudentNames, studentNames);
     }
 }
