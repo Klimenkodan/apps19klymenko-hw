@@ -11,19 +11,4 @@ public class SortDecorator extends SmartArrayDecorator {
         super(sa);
         Arrays.sort(arr, comp);
     }
-
-    @Override
-    public Object[] toArray() {
-        return arr.clone();
-    }
-
-    @Override
-    public String operationDescription() {
-        return getClass().getName();
-    }
-
-    @Override
-    public int size() {
-        return arr.length;
-    }
 }

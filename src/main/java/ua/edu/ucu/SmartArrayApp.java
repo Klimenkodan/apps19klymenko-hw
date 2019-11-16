@@ -75,10 +75,12 @@ public class SmartArrayApp {
         };
 
         SmartArray smart = new BaseArray(students);
-
         smart = new DistinctDecorator(smart);
+        System.out.println(Arrays.toString(smart.toArray()));
         smart = new FilterDecorator(smart, pred);
+        System.out.println(Arrays.toString(smart.toArray()));
         smart = new SortDecorator(smart, comp);
+        System.out.println(Arrays.toString(smart.toArray()));
         smart = new MapDecorator(smart, func);
 
         Object[] result = smart.toArray();
