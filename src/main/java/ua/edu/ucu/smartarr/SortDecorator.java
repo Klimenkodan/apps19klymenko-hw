@@ -24,6 +24,6 @@ public class SortDecorator extends SmartArrayDecorator {
 
     @Override
     public int size() {
-        return size;
+        return arr.length;
     }
 }
